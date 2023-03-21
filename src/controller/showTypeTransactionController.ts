@@ -12,7 +12,6 @@ class ShowTypeTransactionController {
       }
       const useCase = new ShowTypeTransactionUseCase();
       const transactions = await useCase.exec(email, tipo);
-      console.log(transactions)
       response.status(200).json(transactions);
     } catch (error: any) {
       const ERROR = { name: error.name, message: error.message };
