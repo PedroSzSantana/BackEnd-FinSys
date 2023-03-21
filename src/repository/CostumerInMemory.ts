@@ -31,6 +31,9 @@ class CostumerInMemory {
     const transactions = contaCorrente.map((param) => {
       return param.movimentacaoBancaria.filter((item) => item.tipo === tipo);
     });
+    if(!transactions){
+      throw new BadRequestError("Nenhuma Transação encontrada")
+    }
     return transactions;
   }
   TipoSaida(email:string, { descricao, tipo, valor }: IMovimentacaoBancaria){

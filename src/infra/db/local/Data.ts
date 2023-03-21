@@ -17,7 +17,8 @@ const contaCorrente: Array<IContaCorrenteDto> = [
         id:'1',
         descricao:"Pix Ronei",
         valor:1000,
-        tipo:"E"
+        tipo:"E",
+        dataMovimentacao:"03/21/23, 06:03:38"
       }
     ],
   },
